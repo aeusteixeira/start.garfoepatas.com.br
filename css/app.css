@@ -1,0 +1,25 @@
+body {
+    background-color: #146152;
+    background-image: url(../img/Y8A6989-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+header {
+    background-color: #f1f1f1;
+}
+
+main {
+    border-radius: 18px;
+}
+
+button {
+    border-radius: 6px !important
+}
+
+.icon {
+    color: #146152;
+}

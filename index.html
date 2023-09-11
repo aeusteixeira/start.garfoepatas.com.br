@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garfo & Patas - Formulário de Informações para o seu Pet">
+    <meta name="keywords" content="Garfo & Patas, formulário, informações, pet, recomendação alimentar">
+    <meta name="author" content="Seu Nome ou Nome da Empresa">
+
+    <title>Comece Por Aqui - Garfo & Patas</title>
+
+    <!-- Adicione as tags Open Graph (OG) para compartilhamento em redes sociais -->
+    <meta property="og:title" content="Comece Por Aqui - Garfo & Patas">
+    <meta property="og:description" content="Garfo & Patas - Formulário de Informações para o seu Pet">
+    <meta property="og:image" content="https://garfoepatas.com.br/wp-content/uploads/2023/08/Garfo-e-Patas-Image-Share.jpg">
+    <meta property="og:url" content="https://www.start.garfoepatas.com.br">
+    <meta property="og:type" content="website">
+
+    <!-- Adicione as tags Twitter Card para compartilhamento no Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@seuarroba">
+    <meta name="twitter:title" content="Comece Por Aqui - Garfo & Patas">
+    <meta name="twitter:description" content="Garfo & Patas - Formulário de Informações para o seu Pet">
+    <meta name="twitter:image" content="https://garfoepatas.com.br/wp-content/uploads/2023/08/Garfo-e-Patas-Image-Share.jpg">
+
+    <!-- Adicione outros meta tags específicos de SEO, se necessário -->
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+
+<body class="pb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/Logo-GarfoPatas.png" alt="Logo da Empresa" style="max-height: 60px;">
+            </a>
+            <a href="https://www.garfoepatas.com.br" class="btn btn-outline-success" target="_blank">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar para o site
+            </a>
+        </div>
+    </nav>
+    <main class="container mt-5 px-5 py-4 bg-white">
+        <form id="registrationForm" method="post">
+<!-- Etapa 0: Introdução -->
+<div class="form-step text-center">
+    <img src="https://garfoepatas.com.br/wp-content/uploads/2023/08/Sobre-Garfo-e-Patas-scaled.jpg" alt="Foto de gato com a língua de fora" class="img-fluid rounded-circle mb-3" style="max-width: 250px;">
+    <h2>Bem-vindo ao Formulário de Informações para o seu Pet!</h2>
+    <p>Este formulário é essencial para entendermos as necessidades do seu pet e proporcionar a melhor recomendação alimentar. Por favor, preencha todas as etapas cuidadosamente.</p>
+    <p>Ao preencher este formulário, você está contribuindo para a saúde e bem-estar do seu animal de estimação. As informações que você fornecer serão usadas para criar uma dieta adequada e personalizada para o seu pet.</p>
+</div>
+
+            
+            <!-- Etapa 1: Informações Pessoais -->
+            <div class="form-step">
+                <i class="fa-solid fa-user fa-3x mb-3 icon"></i>
+                <h2>Informações Pessoais</h2>
+                <p>
+                    Preencha os campos abaixo com seus dados pessoais.
+                </p>
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input type="text" class="form-control" id="whatsapp" name="whatsapp">
+                </div>
+                <div class="form-group">
+                    <label for="howDidYouKnow">Como conheceu a Garfo & Patas?</label>
+                    <select class="form-control" id="howDidYouKnow" name="howDidYouKnow">
+                        <option value="Indicação de veterinário">Indicação de veterinário</option>
+                        <option value="Indicação de cliente Garfo & Patas">Indicação de cliente Garfo & Patas</option>
+                        <option value="Indicação de parceiro (pet shops, creches, adestradores, etc)">Indicação de
+                            parceiro (pet shops, creches, adestradores, etc)</option>
+                        <option value="Google">Google</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Folder / Material impresso">Folder / Material impresso</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Etapa 2: Informações do Pet (clonável) -->
+            <div class="form-step">
+                <i class="fa-solid fa-dog fa-3x mb-3 icon"></i>
+                <h2>
+                    Informações do Pet (ou Pets)
+                </h2>
+                <p>
+                    Preencha os campos abaixo com as informações do seu pet. Adicione quantos pets quiser.
+                </p>
+                <div id="petStepsContainer">
+                    <div class="card mb-3 pet-card shadow-sm">
+                        <div class="card-body">
+                            <h2>Informações do Pet</h2>
+                            <div class="form-group">
+                                <label for="petName">Nome do pet:</label>
+                                <input type="text" class="form-control" name="petName[]">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="petSpecies">Espécie do pet:</label>
+                                    <select class="form-control" name="petSpecies[]">
+                                        <option value="Cachorro" selected>Cachorro</option>
+                                        <option value="Gato">Gato</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="petGender">Seu pet é fêmea ou macho:</label>
+                                    <select class="form-control" name="petGender[]">
+                                        <option value="Fêmea" selected>Fêmea</option>
+                                        <option value="Macho">Macho</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="petAge">Idade do pet:</label>
+                                <input type="text" class="form-control" name="petAge[]" placeholder="Ex: 2 anos e 3 meses">
+                            </div>
+                            <div class="form-group">
+                                <label for="petBreed">Raça do pet:</label>
+                                <input type="text" class="form-control" name="petBreed[]" placeholder="Ex: Vira-lata">
+                            </div>
+                            <div class="form-group">
+                                <label for="petWeight">Peso do pet:</label>
+                                <input type="text" class="form-control" name="petWeight[]" placeholder="Ex: 10 kg">
+                            </div>
+                            <div class="form-group">
+                                <label for="petIdealWeight">Caso seja um filhote, qual é o peso ideal dele/dela quando adulto(a)?</label>
+                                <input type="text" class="form-control" name="petIdealWeight[]" placeholder="Ex: 15 kg">
+                            </div>
+                            <hr>
+                            <h2>Atividade Física & Castração</h2>
+                            <div class="form-group">
+                                <label for="petActivity">Qual é o nível de atividade física que ele/ela pratica em sua rotina?</label>
+                                <select class="form-control" name="petActivity[]">
+                                    <option value="Sedentário" selected>Sedentário</option>
+                                    <option value="Moderado">Moderado</option>
+                                    <option value="Ativo">Ativo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="petCastrated">Seu pet é castrado?</label>
+                                <select class="form-control" name="petCastrated[]">
+                                    <option value="Sim" selected>Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>
+                            </div>
+                            <hr>
+                            <h2>Alergias e Alimentação Atual</h2>
+                            <div class="form-group">
+                                <label for="petAllergy">Seu pet tem alguma alergia alimentar?</label>
+                                <select class="form-control" name="petAllergy[]">
+                                    <option value="Sim" selected>Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="petAllergyDescription">Se sim, qual?</label>
+                                <input type="text" class="form-control" name="petAllergyDescription[]" placeholder="Ex: Frango">
+                            </div>
+                            <div class="form-group">
+                                <label for="petCurrentFood">Qual é a alimentação atual do seu pet?</label>
+                                <input type="text" class="form-control" name="petCurrentFood[]" placeholder="Ex: Ração seca">
+                            </div>
+                            <!-- Botão para remover animais, só aparece quando houver mais de um card -->
+                            <button type="button" class="btn btn-danger remove-pet">
+                                <i class="fa-solid fa-trash"></i>
+                                Remover Animal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botão para adicionar animais -->
+                <button type="button" class="btn btn-success mb-3" id="addPet">
+                    <i class="fa-solid fa-plus"></i>
+                    Adicionar Animal</button>
+
+            </div>
+
+            <!-- Botões de Navegação entre Etapas -->
+            <div class="form-navigation">
+                <button type="button" class="previous btn btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Anterior</button>
+                <button type="button" class="next btn btn-primary">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    Próximo</button>
+                <button type="submit" class="submit btn btn-success">
+                    <i class="fa-solid fa-check"></i>
+                    Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var formSteps = $(".form-step");
+            var formNavigation = $(".form-navigation");
+            var currentStep = 0;
+    
+            // Inicialmente, exibir apenas a primeira etapa
+            formSteps.hide();
+            formSteps.eq(currentStep).show();
+    
+            // Ocultar o botão "Remover Animal" por padrão
+            $(".remove-pet").hide();
+    
+            // Função para atualizar a visibilidade dos botões de navegação
+            function updateNavigationButtons() {
+                formNavigation.find(".previous").toggle(currentStep > 0);
+                formNavigation.find(".next").toggle(currentStep < formSteps.length - 1);
+                formNavigation.find(".submit").toggle(currentStep === formSteps.length - 1);
+            }
+    
+            // Chamar a função para atualizar a visibilidade dos botões inicialmente
+            updateNavigationButtons();
+    
+            // Botão Próximo
+            formNavigation.on("click", ".next", function () {
+                // Verificar se estamos na última etapa
+                if (currentStep < formSteps.length - 1) {
+                    formSteps.eq(currentStep).hide();
+                    currentStep++;
+                    formSteps.eq(currentStep).show();
+                    updateNavigationButtons();
+                }
+            });
+    
+            // Botão Anterior
+            formNavigation.on("click", ".previous", function () {
+                // Verificar se estamos na primeira etapa
+                if (currentStep > 0) {
+                    formSteps.eq(currentStep).hide();
+                    currentStep--;
+                    formSteps.eq(currentStep).show();
+                    updateNavigationButtons();
+                }
+            });
+    
+            // Botão Adicionar Animal
+            $("#addPet").click(function () {
+                var petStepClone = $(".pet-card").first().clone();
+                petStepClone.find("input, select").val("");
+                $("#petStepsContainer").append(petStepClone);
+    
+                // Mostrar o botão "Remover Animal" quando houver mais de um card
+                if ($("#petStepsContainer .pet-card").length > 1) {
+                    petStepClone.find(".remove-pet").show();
+                }
+            });
+    
+            // Botão Remover Animal
+            $("#petStepsContainer").on("click", ".remove-pet", function () {
+                $(this).closest(".pet-card").remove();
+    
+                // Ocultar o botão "Remover Animal" se houver apenas um card restante
+                if ($("#petStepsContainer .pet-card").length === 1) {
+                    $("#petStepsContainer .pet-card .remove-pet").hide();
+                }
+            });
+    
+            // Validação do formulário usando jQuery Validate
+            $("#registrationForm").validate({
+                errorClass: "text-danger",
+                rules: {
+                    // Defina as regras de validação para os campos aqui
+                },
+                messages: {
+                    // Defina as mensagens de erro aqui
+                },
+                submitHandler: function (form) {
+                    // Lógica para processar o formulário após a validação
+                    form.submit();
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>
