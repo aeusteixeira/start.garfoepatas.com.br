@@ -23,3 +23,42 @@ button {
 .icon {
     color: #146152;
 }
+
+/* Estilos específicos para a página de agradecimento */
+.thank-you {
+    text-align: center;
+    padding: 100px 0;
+    color: #146152;
+}
+
+.thank-you h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.thank-you p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-instagram {
+    background-color: #146152;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-instagram:hover {
+    background-color: #0e4d40;
+    color: #fff;
+}
+
+.btn-garfo-e-patas{
+    background-color: #F29545;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-garfo-e-patas:hover {
+    background-color: #e07e3c;
+    color: #fff;
+}
